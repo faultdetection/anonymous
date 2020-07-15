@@ -40,10 +40,10 @@ You can jump to [Step 3](#Step-3:-Transforming-execution-traces-into-representat
 In the following, we take program class 21 as an example, you can always use '-h' for help information.
 
 (<b>optional</b>)If you want to generate new inputs instead of using pre-generated 100 inputs, run:
-'''
+```
 cd generate_input/
 python generate_input_21.py
-'''
+```
 
 * Rhange working dir:
 ```
