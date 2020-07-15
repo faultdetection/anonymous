@@ -17,11 +17,13 @@ cd anonymous
 
 ### Step 1: Downloading dataset
 One can use the dataset to reproduce all experimental results in the paper.
-* If you don't want to download the dataset, you can jump to [Step 3](#Step-3:-Transforming-execution-traces-into-representations) directly as we already put necessary data in the 'Data'.
+* If you don't want to download the dataset, you can jump to [Step 3](#Step-3:-Transforming-execution-traces-into-representations) directly as we already put necessary data in the current 'Data' directory.
+* Download compressed dataset <b>anonymous_data.tar.gz</b> from anonymous Google Drive: https://drive.google.com/file/d/10C25olTSKxnYERPwW6UW0l2Stf1Kr5cZ/view?usp=sharing
+* Uncompress dataset with
 ```
-TODO: add link.
+tar -xvf anonymous_data.tar.gz
 ```
-* Move all subdirs in downloaded dataset into 'Data' directory.
+* Move all subdirs in 'anonymous_data/Data/*' into current 'Data/' directory.
 
 #### Dataset structure:
 

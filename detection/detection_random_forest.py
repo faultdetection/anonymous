@@ -17,7 +17,7 @@ MODEL_DIR = os.path.join(curr_dir_path, '../Data/ProgramData_Model')
 # load train and test data
 def load_data(data_path, seq_len=50, data_type='data'):
     if not os.path.exists(data_path):
-        print(f'Unknown representation: {data_type}')
+        print(f'No training file found. Or unknown representation: {data_type}')
         exit(0)
     with open(data_path, 'rb') as f:
         all_data = pickle.load(f)
@@ -107,6 +107,14 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     prog_id = str(args.prog_id)
+
+    if int(prog_id) not in [
+        1, 2, 6, 7, 12, 13, 14, 15, 16, 17, 20, 21, 23, 24, 29, 31, 32, 35, 39, 40, 44, 45, 48, 49, 50,
+        51, 53, 54, 55, 56, 57, 59, 61, 63, 65, 67, 69, 71, 75, 76, 77, 79, 83, 84, 86, 89, 90, 92, 94,
+        95, 98, 99, 100, 102, 104
+        ]:
+        print('\n*** Warning: This program class is not involved in the evaluation of the paper! ***\n')
+
     num_random_split = int(args.random)
 
     random_forest(args.split_method, args.representation, num_random_split)
